@@ -23,6 +23,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.logingform.ui.theme.LogingformTheme
 
@@ -51,7 +52,13 @@ fun LoginForm(modifier: Modifier = Modifier) {
     Column (
         modifier = modifier
     ) {
-        Text("Login")
+
+        Text(
+            text ="Login" ,
+            modifier = modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center
+        )
+
 
         OutlinedTextField(
             value = username,
@@ -85,9 +92,15 @@ fun LoginForm(modifier: Modifier = Modifier) {
             visualTransformation = PasswordVisualTransformation()
         )
 
-        Button(onClick = {}) {
+        Button(
+            onClick = {},
+            modifier = Modifier
+                .fillMaxWidth()
+        ) {
             Text("Submit")
         }
+
+
     }
 
 }
